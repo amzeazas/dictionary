@@ -1,0 +1,22 @@
+<center>
+<h1>Welcome to the Public Dictionary!</h1>
+<br>
+<h3>Below are the list of words. Click on one to see its definition(s). Feel free to add any of your own words and/or definitions!</h3>
+</center>
+<br>
+<br>
+<p>Words:</p>
+<ul>
+  <% @words.each() do |word| %>
+  <li><a href="/word/<%= word.id() %>"><%= word.name() %></a></li>
+  <% end %>
+</ul>
+<br>
+<br>
+<p>Add a new word:</p>
+<br>
+<form action="/" method="post">
+  <label for="word">Word:</label>
+  <input id="word" name="word" type="text">
+  <button type= "submit">Add</button>
+</form>
