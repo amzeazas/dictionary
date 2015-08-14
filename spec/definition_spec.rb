@@ -27,4 +27,11 @@ describe(Definition) do
       expect(Definition.all()).to(eq([]))
     end
   end
+  describe("id") do
+    it("returns the id of the vehicle") do
+      test_definition = Definition.new(:description => "the name of my cat")
+      test_definition.save()
+      expect(test_definition.id()).to(eq(1))
+    end
+  end
 end
