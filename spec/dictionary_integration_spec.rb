@@ -11,12 +11,3 @@ describe('the dictionary path', {:type => :feature}) do
     expect(page).to have_content("Success!")
   end
 end
-
-describe('the dictionary path', {:type => :feature}) do
-  it('processes the user entry and adds it to the list of words') do
-    visit('/word/:id')
-    fill_in('definition', :with => 'character from Batman')
-    click_button('Add')
-    expect(page).to have_content("Success!")
-  end
-end
