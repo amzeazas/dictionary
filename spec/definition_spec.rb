@@ -2,6 +2,10 @@ require('rspec')
 require('definition')
 
 describe(Definition) do
+  before() do
+    Definition.clear()
+  end
+  
   describe("#descrition") do
     it("returns the description of a definition") do
       test_definition = Definition.new(:description => "the name of my cat")
