@@ -5,6 +5,7 @@ class Word
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
     @id = @@words.length().+(1)
+    @definitions = []
   end
 
   define_method(:name) do
@@ -25,5 +26,9 @@ class Word
 
   define_method(:id) do
     @id
+  end
+
+  define_method(:definitions) do
+    @definitions
   end
 end

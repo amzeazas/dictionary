@@ -35,7 +35,7 @@ describe(Word) do
       expect(test_word.id()).to(eq(1))
     end
   end
-  description("#definitions") do
+  describe("#definitions") do
     it("initially returns an empty array of definition for the word") do
       test_word = Word.new(:name => "Harley Quinn")
       expect(test_word.definitions()).to(eq([]))
