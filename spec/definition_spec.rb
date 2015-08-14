@@ -20,4 +20,11 @@ describe(Definition) do
       expect(Definition.all()).to(eq([test_definition]))
     end
   end
+  describe(".clear") do
+    it("empties the array of saved descriptions") do
+      test_definition = Definition.new(:description => "the name of my cat").save()
+      Definition.clear()
+      expect(Definition.all()).to(eq([]))
+    end
+  end
 end
