@@ -8,3 +8,9 @@ get("/") do
   @words = Word.all()
   erb(:index)
 end
+
+post("/") do
+  word = Word.new({:name => params.fetch("word")})
+  word.save()
+  erb(:success)
+end
