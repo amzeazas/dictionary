@@ -41,4 +41,12 @@ describe(Word) do
       expect(test_word.definitions()).to(eq([]))
     end
   end
+  describe("#add_definition") do
+    it("adds a new definition to a word") do
+      test_word = Word.new(:name => "Harley Quinn")
+      test_definition = Definition.new(:description => "the name of my cat")
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions()).to(eq([test_definition]))
+    end
+  end
 end
