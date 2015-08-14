@@ -3,6 +3,10 @@ require('word')
 require('definition')
 
 describe(Word) do
+  before() do
+    Word.clear()
+  end
+
   describe("#name") do
     it("returns the name of the word") do
       test_word = Word.new(:name => "Harley Quinn")
